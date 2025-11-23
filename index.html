@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mój Dev Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Dev Hub</h2>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#" class="nav-link active" data-target="quick-links">Szybkie Linki</a></li>
+                    <li><a href="#" class="nav-link" data-target="git-tutorial">Git Bash Tutorial</a></li>
+                    <li><a href="#" class="nav-link" data-target="formsubmit-tutorial">FormSubmit Tutorial</a></li>
+                    <li><a href="#" class="nav-link" data-target="checklist">Checklista WWW</a></li>
+                    <li><a href="#" class="nav-link" data-target="my-sites">Moje Strony</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p>&copy; 2025 Dev Hub</p>
+            </div>
+        </aside>
+
+        <main class="main-content">
+            <section id="quick-links" class="content-section active">
+                <header class="section-header">
+                    <h2>Szybkie Linki</h2>
+                    <p>Twoje ulubione miejsca w sieci</p>
+                </header>
+                <div class="links-grid">
+                    <a href="https://github.com" target="_blank" class="card">
+                        <div class="icon">🐙</div>
+                        <h3>Github</h3>
+                        <p>Hosting kodu i współpraca</p>
+                    </a>
+                    <a href="https://home.pl" target="_blank" class="card">
+                        <div class="icon">🏠</div>
+                        <h3>Home.pl</h3>
+                        <p>Hosting i domeny</p>
+                    </a>
+                    <a href="https://chat.openai.com" target="_blank" class="card">
+                        <div class="icon">🤖</div>
+                        <h3>ChatGPT</h3>
+                        <p>Asystent AI</p>
+                    </a>
+                    <a href="https://gemini.google.com" target="_blank" class="card">
+                        <div class="icon">✨</div>
+                        <h3>Gemini</h3>
+                        <p>Model AI od Google</p>
+                    </a>
+                    <a href="https://search.google.com/search-console" target="_blank" class="card">
+                        <div class="icon">📈</div>
+                        <h3>Search Console</h3>
+                        <p>Analiza widoczności w Google</p>
+                    </a>
+                    <a href="https://pagespeed.web.dev/" target="_blank" class="card">
+                        <div class="icon">⚡</div>
+                        <h3>PageSpeed</h3>
+                        <p>Test szybkości strony</p>
+                    </a>
+                    <a href="https://dribbble.com" target="_blank" class="card">
+                        <div class="icon">🏀</div>
+                        <h3>Dribbble</h3>
+                        <p>Inspiracje designem</p>
+                    </a>
+                    <a href="https://pinterest.com" target="_blank" class="card">
+                        <div class="icon">📌</div>
+                        <h3>Pinterest</h3>
+                        <p>Tablice inspiracji</p>
+                    </a>
+                    <a href="https://heroicons.com" target="_blank" class="card">
+                        <div class="icon">🛡️</div>
+                        <h3>Heroicons</h3>
+                        <p>Ikony SVG</p>
+                    </a>
+                    <a href="https://www.google.com/maps/d/?hl=pl" target="_blank" class="card">
+                        <div class="icon">🗺️</div>
+                        <h3>Moje Mapy</h3>
+                        <p>Własne mapy Google</p>
+                    </a>
+                    <a href="https://fonts.google.com" target="_blank" class="card">
+                        <div class="icon">🅰️</div>
+                        <h3>Google Fonts</h3>
+                        <p>Darmowe czcionki</p>
+                    </a>
+                    <a href="https://calendar.google.com" target="_blank" class="card">
+                        <div class="icon">📅</div>
+                        <h3>Kalendarz</h3>
+                        <p>Zarządzanie czasem</p>
+                    </a>
+                    <a href="https://pixabay.com" target="_blank" class="card">
+                        <div class="icon">🖼️</div>
+                        <h3>Pixabay</h3>
+                        <p>Darmowe zdjęcia</p>
+                    </a>
+                </div>
+            </section>
+
+            <section id="git-tutorial" class="content-section">
+                <header class="section-header">
+                    <h2>Git Bash Tutorial</h2>
+                    <p>Ściągawka komend</p>
+                </header>
+
+                <div class="tutorial-grid">
+                    <div class="tutorial-block">
+                        <h3>Aktualizacja Repozytorium (Push)</h3>
+                        <p>Jak wysłać zmiany na serwer:</p>
+                        <div class="code-block">
+                            <pre><code>git status
+git add .
+git commit -m "Opis zmian"
+git push</code></pre>
+                            <button class="copy-btn" onclick="copyCode(this)">Kopiuj</button>
+                        </div>
+                    </div>
+
+                    <div class="tutorial-block">
+                        <h3>Wgranie Repozytorium (Setup/Clone)</h3>
+                        <p>Jak zacząć pracę z nowym repozytorium:</p>
+                        <div class="code-block">
+                            <pre><code>git init
+git remote add origin https://github.com/user/repo.git
+git pull origin main
+# lub po prostu:
+git clone https://github.com/user/repo.git</code></pre>
+                            <button class="copy-btn" onclick="copyCode(this)">Kopiuj</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="formsubmit-tutorial" class="content-section">
+                <header class="section-header">
+                    <h2>FormSubmit Tutorial</h2>
+                    <p>Jak podłączyć formularz kontaktowy bez backendu</p>
+                </header>
+
+                <div class="tutorial-block" style="max-width: 800px; margin: 0 auto;">
+                    <h3>Krok po kroku</h3>
+                    <ol style="margin-left: 20px; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.8;">
+                        <li>Stwórz formularz HTML w swoim kodzie.</li>
+                        <li>Ustaw atrybut <code>action</code> na <code>https://formsubmit.co/TWOJ@EMAIL.COM</code>.</li>
+                        <li>Ustaw atrybut <code>method</code> na <code>POST</code>.</li>
+                        <li>Upewnij się, że każde pole <code>input</code> ma atrybut <code>name</code>.</li>
+                        <li>Wyślij formularz raz, aby aktywować go (otrzymasz email z prośbą o potwierdzenie).</li>
+                    </ol>
+
+                    <h3>Przykładowy kod</h3>
+                    <div class="code-block">
+                        <pre><code>&lt;form action="https://formsubmit.co/twoj@email.com" method="POST"&gt;
+    &lt;input type="text" name="name" placeholder="Imię" required&gt;
+    &lt;input type="email" name="email" placeholder="Email" required&gt;
+    &lt;textarea name="message" placeholder="Wiadomość"&gt;&lt;/textarea&gt;
+    &lt;button type="submit"&gt;Wyślij&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                        <button class="copy-btn" onclick="copyCode(this)">Kopiuj</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="checklist" class="content-section">
+                <header class="section-header">
+                    <h2>Checklista WWW</h2>
+                    <p>Co powinna zawierać profesjonalna strona</p>
+                </header>
+
+                <div class="checklist-container">
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check1">
+                        <label for="check1"><strong>Logo / Branding</strong> – Spójna identyfikacja wizualna.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check2">
+                        <label for="check2"><strong>Nazwa domeny</strong> – Łatwa do zapamiętania.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check3">
+                        <label for="check3"><strong>Favicon</strong> – Ikona w karcie przeglądarki.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check4">
+                        <label for="check4"><strong>Strona główna</strong> – Nagłówek z korzyściami dla klienta.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check5">
+                        <label for="check5"><strong>O mnie</strong> – Historia, wartości, doświadczenie.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check6">
+                        <label for="check6"><strong>Usługi / Cennik</strong> – Konkretne oferty i ceny.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check7">
+                        <label for="check7"><strong>Portfolio / Projekty</strong> – Realizacje i case studies.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check8">
+                        <label for="check8"><strong>Referencje</strong> – Opinie klientów budujące zaufanie.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check9">
+                        <label for="check9"><strong>Certyfikaty</strong> – Potwierdzenie kompetencji.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check10">
+                        <label for="check10"><strong>CTA</strong> – Jasne wezwanie do działania (np. "Napisz").</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check11">
+                        <label for="check11"><strong>Kontakt</strong> – E-mail, telefon, formularz.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check12">
+                        <label for="check12"><strong>Dane do faktury</strong> – NIP, nazwa firmy (dla B2B).</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check13">
+                        <label for="check13"><strong>Media społecznościowe</strong> – Linki do profili.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check14">
+                        <label for="check14"><strong>Blog</strong> – Artykuły eksperckie (opcjonalnie).</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check15">
+                        <label for="check15"><strong>Polityka prywatności / Cookies</strong> – Wymogi prawne.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check16">
+                        <label for="check16"><strong>SSL</strong> – Kłódka bezpieczeństwa (HTTPS).</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check17">
+                        <label for="check17"><strong>Responsywność</strong> – Dobre działanie na telefonach.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check18">
+                        <label for="check18"><strong>Szybkość ładowania</strong> – Optymalizacja obrazów i kodu.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check19">
+                        <label for="check19"><strong>SEO</strong> – Słowa kluczowe, meta tagi.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check20">
+                        <label for="check20"><strong>Analiza ruchu</strong> – Podpięte Google Analytics.</label>
+                    </div>
+                    <div class="checklist-item">
+                        <input type="checkbox" id="check21">
+                        <label for="check21"><strong>Dostępność (WCAG)</strong> – Ułatwienia dla
+                            niepełnosprawnych.</label>
+                    </div>
+                </div>
+            </section>
+
+            <section id="my-sites" class="content-section">
+                <header class="section-header">
+                    <h2>Moje Strony</h2>
+                    <p>Projekty, nad którymi pracuję</p>
+                </header>
+                <div class="links-grid">
+                    <a href="https://brokatowedomki.pl" target="_blank" class="card">
+                        <div class="icon">🏡</div>
+                        <h3>Brokatowe Domki</h3>
+                        <p>Strona Wypoczynkowa w Gąskach</p>
+                    </a>
+                    <a href="https://freigo.pl" target="_blank" class="card">
+                        <div class="icon">🚀</div>
+                        <h3>Freigo</h3>
+                        <p>Strona Autodetailngowa</p>
+                    </a>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
