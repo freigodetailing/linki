@@ -117,10 +117,9 @@
                         <h3>Aktualizacja Repozytorium (Push)</h3>
                         <p>Jak wysłać zmiany na serwer:</p>
                         <div class="code-block">
-                            <pre><code>git status
-git add .
-git commit -m "Opis zmian"
-git push</code></pre>
+                            <pre><code>git remote add origin https://github.com/freigodetailing/testy.git
+git branch -M main
+git push -u origin main</code></pre>
                             <button class="copy-btn" onclick="copyCode(this)">Kopiuj</button>
                         </div>
                     </div>
@@ -130,10 +129,11 @@ git push</code></pre>
                         <p>Jak zacząć pracę z nowym repozytorium:</p>
                         <div class="code-block">
                             <pre><code>git init
-git remote add origin https://github.com/user/repo.git
-git pull origin main
-# lub po prostu:
-git clone https://github.com/user/repo.git</code></pre>
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/[nazwa użytkownika]/[nazwa repozytorium].git
+git push -u origin main</code></pre>
                             <button class="copy-btn" onclick="copyCode(this)">Kopiuj</button>
                         </div>
                     </div>
@@ -290,3 +290,4 @@ git clone https://github.com/user/repo.git</code></pre>
 
 
 </html>
+
